@@ -362,17 +362,9 @@ video{
 }
 ::-webkit-scrollbar{
     background: linear-gradient(0deg, rgba(0,5,128,1) 0%, rgba(0,0,0,1) 100%);
-    width: 10px;
+    width: 5px;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(106deg, rgba(0,8,143,1) 0%, rgba(128,135,255,1) 36%, rgba(0,14,255,1) 48%, rgba(55,59,138,1) 64%, rgba(0,0,0,1) 100%);
-    border-radius: 20px;
-}
-::-moz-scrollbar{
-    background: linear-gradient(0deg, rgba(0,5,128,1) 0%, rgba(0,0,0,1) 100%);
-    width: 10px;
-}
-::-moz-scrollbar-thumb{
     background: linear-gradient(106deg, rgba(0,8,143,1) 0%, rgba(128,135,255,1) 36%, rgba(0,14,255,1) 48%, rgba(55,59,138,1) 64%, rgba(0,0,0,1) 100%);
     border-radius: 20px;
 }
