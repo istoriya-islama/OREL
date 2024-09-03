@@ -1,4 +1,4 @@
-//Button Up
+//TODO: Button Up
 $('.back-to-top').click(function () {
   $('body,html').animate({ scrollTop: 0}, 800); // 800 - Скорость анимации
 });
@@ -15,7 +15,7 @@ $(window).scroll(function() { // Отслеживаем начало прокр�
 
 
 
-
+//TODO: Dowloader
 function triggerDownload(fileName) {
     var element = document.createElement('a');
     element.setAttribute('href', fileName);
@@ -26,4 +26,3 @@ function triggerDownload(fileName) {
     element.click();
     document.body.removeChild(element);
   }
-
