@@ -379,3 +379,22 @@ video{
 button{
     user-select: none;
 }
+.btn7{
+    background: #0007d4;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    font-size: 18px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    float: left;
+    user-select: none
+}
+.btn7:hover{
+    cursor: pointer;
+    background: #0005a3;
+    transform: scale(1.1);
+}
