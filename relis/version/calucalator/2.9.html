@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OREL — Горячие клавиши Калькулятор 2.9</title>
+    <link rel="stylesheet" href="../../../Components/css/style.css" />
+    <link rel="icon" href="../../../Components/img/orel.ico" type="image/x-icon" />
+    <style>
+      .hotkeys-page {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 60px 20px 80px;
+      }
+
+      .page-eyebrow {
+        color: #5a8de8;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        text-shadow: 0 0 12px rgba(33,80,200,0.4);
+      }
+
+      .hotkeys-page h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #dce8ff;
+        line-height: 1.25;
+        margin-bottom: 16px;
+      }
+      .hotkeys-page h1 span {
+        background: linear-gradient(135deg, #7ba4f0 0%, #2150c8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hotkeys-page .subtitle {
+        font-size: 17px;
+        color: #8fa8d8;
+        line-height: 1.75;
+        margin-bottom: 50px;
+        max-width: 620px;
+        border-left: 2px solid rgba(33,80,200,0.45);
+        padding-left: 16px;
+      }
+
+      /* ── SECTION CARD ── */
+      .hotkeys-section {
+        background: linear-gradient(135deg, #03060f 0%, #080f22 65%, #0c1530 100%);
+        border: 1px solid rgba(26,58,143,0.28);
+        border-radius: 18px;
+        padding: 30px 34px;
+        margin-bottom: 22px;
+        box-shadow: 0 6px 32px rgba(0,0,0,0.55),
+                    inset 0 1px 0 rgba(255,255,255,0.03);
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .hotkeys-section:hover {
+        border-color: rgba(33,80,200,0.42);
+        box-shadow: 0 10px 42px rgba(0,0,0,0.7),
+                    0 0 24px rgba(17,38,96,0.18);
+      }
+
+      .hotkeys-section h2 {
+        font-size: 21px;
+        font-weight: 700;
+        color: #ccdaf8;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .section-icon {
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(135deg, #0a1530 0%, #112260 100%);
+        border: 1px solid rgba(33,80,200,0.4);
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .section-desc {
+        font-size: 15px;
+        color: #8fa8d8;
+        margin-bottom: 22px;
+        line-height: 1.65;
+        padding-left: 46px;
+      }
+
+      /* ── KEY ROWS ── */
+      .key-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .key-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid transparent;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .key-row:hover {
+        background: rgba(33,80,200,0.07);
+        border-color: rgba(33,80,200,0.18);
+      }
+
+      .key-badges {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+        min-width: 130px;
+      }
+
+      .key-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 34px;
+        height: 28px;
+        padding: 0 8px;
+        background: linear-gradient(180deg, #0d1e45 0%, #060e22 100%);
+        border: 1px solid rgba(33,80,200,0.5);
+        border-bottom: 2px solid rgba(33,80,200,0.7);
+        border-radius: 6px;
+        font-family: monospace;
+        font-size: 13px;
+        font-weight: 700;
+        color: #7ba4f0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.5),
+                    inset 0 1px 0 rgba(100,160,255,0.08);
+        white-space: nowrap;
+        letter-spacing: 0.5px;
+      }
+
+      .key-plus {
+        font-size: 12px;
+        color: #8fa8d8;
+        font-weight: 700;
+      }
+
+      .key-desc {
+        font-size: 15px;
+        color: #b8ccf0;
+        line-height: 1.4;
+      }
+
+      /* ── BOTTOM NOTE ── */
+      .hotkeys-note {
+        margin-top: 32px;
+        padding: 20px 26px;
+        background: linear-gradient(135deg, #030610 0%, #080f22 100%);
+        border: 1px solid rgba(26,58,143,0.3);
+        border-radius: 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      }
+      .hotkeys-note .note-icon {
+        font-size: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        filter: drop-shadow(0 0 6px rgba(33,80,200,0.5));
+      }
+      .hotkeys-note p {
+        font-size: 15px;
+        color: #8fa8d8;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .hotkeys-note p strong {
+        color: #ccdaf8;
+      }
+
+      /* ── VERSION BADGE ── */
+      .version-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #0a1530 0%, #112260 100%);
+        border: 1px solid rgba(33,80,200,0.35);
+        border-radius: 50px;
+        font-size: 14px;
+        color: #7ba4f0;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      }
+      .version-badge::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #2150c8;
+        box-shadow: 0 0 8px rgba(33,80,200,0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back_to_top" class="back-to-top active">
+      <img src="../../../Components/img/up.png" alt="Up" height="40" width="40" />
+    </div>
+
+    <div class="wrapper">
+      <header class="conteiner">
+        <span class="logo">orel</span>
+        <nav>
+          <ul>
+            <li><a href="../../../index.html">Главная</a></li>
+            <li><a href="../../../prog/programwin.html">Программы для Windows</a></li>
+            <li><a href="../../../strprogram.html">Старые версии Программ</a></li>
+            <li><a href="https://orel-insider.onrender.com/">OREL Insider</a></li>
+            <li><a href="https://orel-store-nw8e.onrender.com">OREL Store</a></li>
+            <li class="active"><a href="../../../relis.html">Релизы</a></li>
+            <li class="btn"><a href="https://t.me/obr_orel_bot">Тех поддержка</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="conteiner">
+        <div class="hotkeys-page">
+
+          <p class="page-eyebrow">Документация</p>
+          <h1>Горячие клавиши в<br/><span>OREL Калькулятор 2.9 Янтарь</span></h1>
+          <p class="subtitle">
+            Ознакомьтесь со списком горячих клавиш для быстрого и удобного управления калькулятором.
+          </p>
+
+          <!-- Обычный режим -->
+          <div class="hotkeys-section">
+            <h2>
+              <span class="section-icon">🔢</span>
+              Обычный режим калькулятора
+            </h2>
+            <p class="section-desc">
+              В обычном режиме вы можете полностью управлять калькулятором с клавиатуры.
+              Все кнопки работают так же, как если бы вы нажимали их мышкой.
+            </p>
+
+            <div class="key-list">
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">0</span><span class="key-plus">—</span><span class="key-badge">9</span></div>
+                <span class="key-desc">Ввод соответствующих чисел</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">.</span><span class="key-plus">/</span><span class="key-badge">,</span></div>
+                <span class="key-desc">Десятичная запятая</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">+</span></div>
+                <span class="key-desc">Сложение</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">-</span></div>
+                <span class="key-desc">Вычитание</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">*</span></div>
+                <span class="key-desc">Умножение</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">/</span></div>
+                <span class="key-desc">Деление</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">%</span><span class="key-plus">/</span><span class="key-badge">Shift</span><span class="key-plus">+</span><span class="key-badge">5</span></div>
+                <span class="key-desc">Процент</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">Enter</span></div>
+                <span class="key-desc">Вычислить результат</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">Delete</span></div>
+                <span class="key-desc">Полная очистка (AC)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">Backspace</span></div>
+                <span class="key-desc">Удалить последний символ</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">P</span></div>
+                <span class="key-desc">Число π (Пи)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">E</span></div>
+                <span class="key-desc">Число e</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">I</span></div>
+                <span class="key-desc">Открыть меню</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Инженерный режим -->
+          <div class="hotkeys-section">
+            <h2>
+              <span class="section-icon">⚙️</span>
+              Инженерный режим калькулятора
+            </h2>
+            <p class="section-desc">
+              В инженерном режиме доступны дополнительные математические функции.
+            </p>
+
+            <div class="key-list">
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">!</span></div>
+                <span class="key-desc">Факториал числа</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">Q</span></div>
+                <span class="key-desc">Возвести число в квадрат (x²)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">W</span></div>
+                <span class="key-desc">Возвести число в куб (x³)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">R</span></div>
+                <span class="key-desc">Квадратный корень (√)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">D</span></div>
+                <span class="key-desc">Обратное число (1/x)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">A</span></div>
+                <span class="key-desc">Модуль числа |x|</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">F</span></div>
+                <span class="key-desc">e в степени x (eˣ)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">S</span></div>
+                <span class="key-desc">10 в степени x (10ˣ)</span>
+              </div>
+              <div class="key-row">
+                <div class="key-badges"><span class="key-badge">X</span></div>
+                <span class="key-desc">2 в степени x (2ˣ)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Заметка -->
+          <div class="hotkeys-note">
+            <span class="note-icon">💡</span>
+            <p>
+              <strong>Все горячие клавиши работают с анимацией кнопок</strong> —
+              вы видите визуальный эффект нажатия, как при использовании мыши.
+            </p>
+          </div>
+
+          <div class="version-badge">OREL Калькулятор 2.9 Янтарь</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <h3>Спасибо за поддержку</h3>
+      <p>Этому каналу</p>
+      <div class="info">
+        <div class="block">
+          <img src="../../../Components/img/it.jpg" height="110px" width="110px" />
+          <p>Всё о программировании</p>
+          <div class="btn"><a href="https://t.me/it_reviews_other">→</a></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="block">
+        <div class="logo">orel</div>
+        <div class="logop">Спасибо за внимание!</div>
+      </div>
+    </footer>
+
+    <script src="../../../Components/js/jquery.js"></script>
+    <script src="../../../Components/js/index.js"></script>
+  </body>
+</html>

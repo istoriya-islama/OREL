@@ -1,134 +1,445 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OREL</title>
-    <link rel="stylesheet" href="../Components/css/style.css" />
-    <link rel="icon" href="../Components/img/orel.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <div id="back_to_top" class="back-to-top active">
-      <img src="../Components/img/up.png" alt="Up" height="40" width="40" />
-    </div>
-    <div class="wrapper">
-      <header class="conteiner">
-        <span class="logo">orel</span>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="../prog/programwin.html">Программы для Windows</a></li>
-            <li><a href="../strprogram.html">Старые версии Программ</a></li>
-            <li>
-              <a href="https://orel-insider.onrender.com/">OREL Insider</a>
-            </li>
-            <li>
-              <a href="https://orel-store-nw8e.onrender.com">OREL Store</a>
-            </li>
-            <li class="active"><a href="relis.html">Релизы</a></li>
-            <li class="btn">
-              <a href="https://t.me/obr_orel_bot">Тех поддержка</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>OREL</title>
+		<link rel="stylesheet" href="../Components/css/style.css" />
+		<!-- Кастомный плеер CSS -->
+		<link rel="stylesheet" href="../Components/css/video-player.css" />
+		<link rel="icon" href="../Components/img/orel.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="back_to_top" class="back-to-top active">
+			<img src="../Components/img/up.png" alt="Up" height="40" width="40" />
+		</div>
 
-      <div class="hero conteiner">
-        <div class="hero--info">
-          <h2>OREL</h2>
-          <h1>Релизы Калькуляторов</h1>
-          <p>Все релизы</p>
-          <button class="btn"><a href="../relis.html">К релизам</a></button>
-        </div>
-        <img src="../Components/img/video.png" alt="Calculator" />
-      </div>
-      <div class="conteiner liner">
-        <h2>Релизы:</h2>
-        <h3>Калькулятор 2.8.4</h3>
-        <br />
-        <a class="btn7" href="version/calucalator/2.8.4.html">Открыть</a>
-        <br /> <br />
-        <br /> <br />
-        <section>
-          <video
-            controls="controls"
-            poster="../Components/video/283.png"
-            width="720px"
-          >
-            <source
-              src="../Components/video/ORELcalculator2.8.3.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <h3>Калькулятор 2.8.3</h3>
-          <br /><br />
-        </section>
-        <section>
-          <video
-            controls="controls"
-            poster="../Components/video/282.png"
-            width="720px"
-          >
-            <source
-              src="../Components/video/ORELcalculator2.8.2.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <h3>Калькулятор 2.8.2</h3>
-          <br /><br />
-        </section>
-        <section>
-          <video
-            controls="controls"
-            poster="../Components/video/281.png"
-            width="720px"
-          >
-            <source
-              src="../Components/video/ОRELCalculator2.8.1.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <h3>Калькулятор 2.8.1</h3>
-          <br /><br />
-        </section>
-        <section>
-          <video
-            controls="controls"
-            poster="../Components/video/27.png"
-            width="720px"
-          >
-            <source
-              src="../Components/video/ORELcalculator2.7.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <h3>Калькулятор 2.7</h3>
-          <br /><br />
-        </section>
-      </div>
-    </div>
+		<div class="wrapper">
+			<header class="conteiner">
+				<span class="logo">orel</span>
+				<nav>
+					<ul>
+						<li><a href="../index.html">Главная</a></li>
+						<li><a href="../prog/programwin.html">Программы для Windows</a></li>
+						<li><a href="../strprogram.html">Старые версии Программ</a></li>
+						<li>
+							<a href="https://orel-insider.onrender.com/">OREL Insider</a>
+						</li>
+						<li>
+							<a href="https://orel-store-nw8e.onrender.com">OREL Store</a>
+						</li>
+						<li class="active"><a href="relis.html">Релизы</a></li>
+						<li class="btn">
+							<a href="https://t.me/obr_orel_bot">Тех поддержка</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-    <div class="features">
-      <h3>Спасибо за поддержку</h3>
-      <p>Этаму каналу</p>
-      <div class="info">
-        <div class="block">
-          <img src="../Components/img/it.jpg" height="110px" width="110px" />
-          <p>Всё о программировании</p>
-          <div class="btn">
-            <a href="https://t.me/it_reviews_other">→</a>
-          </div>
-        </div>
-      </div>
-    </div>
+			<div class="hero conteiner">
+				<div class="hero--info">
+					<h2>OREL</h2>
+					<h1>Релизы Калькуляторов</h1>
+					<p>Все релизы</p>
+					<button class="btn"><a href="../relis.html">К релизам</a></button>
+				</div>
+				<img src="../Components/img/video.png" alt="Calculator" />
+			</div>
 
-    <footer>
-      <div class="block">
-        <div class="logo">orel</div>
-        <div class="logop">Спасибо за внимение!</div>
-      </div>
-    </footer>
-    <script src="../Components/js/jquery.js"></script>
-    <script src="../Components/js/index.js"></script>
-  </body>
+			<div class="conteiner liner">
+				<h2>Релизы:</h2>
+        <br/><br/>
+        <section>
+					<div class="video-wrap">
+						<video poster="../Components/video/29.png">
+							<source
+								src="../Components/video/ORELСalculator2.9Amber.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<div class="v-overlay">
+							<div class="v-overlay-btn show">
+								<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+							</div>
+						</div>
+						<div class="video-controls">
+							<div class="v-progress"><div class="v-fill"></div></div>
+							<div class="v-row">
+								<button class="v-btn v-play">
+									<svg class="icon-play" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" /></svg
+									><svg
+										class="icon-pause"
+										viewBox="0 0 24 24"
+										style="display: none"
+									>
+										<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+									</svg>
+								</button>
+								<div class="v-vol-wrap">
+									<button class="v-btn v-mute">
+										<svg class="icon-vol" viewBox="0 0 24 24">
+											<path
+												d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+											/></svg
+										><svg
+											class="icon-muted"
+											viewBox="0 0 24 24"
+											style="display: none"
+										>
+											<path
+												d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+											/>
+										</svg>
+									</button>
+									<input
+										type="range"
+										class="v-vol"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+								<span class="v-time">0:00 / 0:00</span>
+								<div class="v-spacer"></div>
+								<button class="v-btn v-fs">
+									<svg class="icon-fs" viewBox="0 0 24 24">
+										<path
+											d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+										/></svg
+									><svg class="icon-fs-exit" viewBox="0 0 24 24">
+										<path
+											d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<h3>Калькулятор 2.9</h3>
+          <br />
+				<a class="btn7" href="version/calucalator/2.9.html">Открыть горачии калавеши</a>
+					<br /><br /><br/><br/>
+				</section>
+
+				<h3>Калькулятор 2.8.4</h3>
+				<br />
+				<a class="btn7" href="version/calucalator/2.8.4.html">Открыть</a>
+				<br /><br /><br /><br />
+
+				<section>
+					<div class="video-wrap">
+						<video poster="../Components/video/283.png">
+							<source
+								src="../Components/video/ORELcalculator2.8.3.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<div class="v-overlay">
+							<div class="v-overlay-btn show">
+								<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+							</div>
+						</div>
+						<div class="video-controls">
+							<div class="v-progress"><div class="v-fill"></div></div>
+							<div class="v-row">
+								<button class="v-btn v-play">
+									<svg class="icon-play" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" /></svg
+									><svg
+										class="icon-pause"
+										viewBox="0 0 24 24"
+										style="display: none"
+									>
+										<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+									</svg>
+								</button>
+								<div class="v-vol-wrap">
+									<button class="v-btn v-mute">
+										<svg class="icon-vol" viewBox="0 0 24 24">
+											<path
+												d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+											/></svg
+										><svg
+											class="icon-muted"
+											viewBox="0 0 24 24"
+											style="display: none"
+										>
+											<path
+												d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+											/>
+										</svg>
+									</button>
+									<input
+										type="range"
+										class="v-vol"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+								<span class="v-time">0:00 / 0:00</span>
+								<div class="v-spacer"></div>
+								<button class="v-btn v-fs">
+									<svg class="icon-fs" viewBox="0 0 24 24">
+										<path
+											d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+										/></svg
+									><svg class="icon-fs-exit" viewBox="0 0 24 24">
+										<path
+											d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<h3>Калькулятор 2.8.3</h3>
+					<br /><br />
+				</section>
+
+				<section>
+					<div class="video-wrap">
+						<video poster="../Components/video/282.png">
+							<source
+								src="../Components/video/ORELcalculator2.8.2.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<div class="v-overlay">
+							<div class="v-overlay-btn show">
+								<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+							</div>
+						</div>
+						<div class="video-controls">
+							<div class="v-progress"><div class="v-fill"></div></div>
+							<div class="v-row">
+								<button class="v-btn v-play">
+									<svg class="icon-play" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" /></svg
+									><svg
+										class="icon-pause"
+										viewBox="0 0 24 24"
+										style="display: none"
+									>
+										<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+									</svg>
+								</button>
+								<div class="v-vol-wrap">
+									<button class="v-btn v-mute">
+										<svg class="icon-vol" viewBox="0 0 24 24">
+											<path
+												d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+											/></svg
+										><svg
+											class="icon-muted"
+											viewBox="0 0 24 24"
+											style="display: none"
+										>
+											<path
+												d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+											/>
+										</svg>
+									</button>
+									<input
+										type="range"
+										class="v-vol"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+								<span class="v-time">0:00 / 0:00</span>
+								<div class="v-spacer"></div>
+								<button class="v-btn v-fs">
+									<svg class="icon-fs" viewBox="0 0 24 24">
+										<path
+											d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+										/></svg
+									><svg class="icon-fs-exit" viewBox="0 0 24 24">
+										<path
+											d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<h3>Калькулятор 2.8.2</h3>
+					<br /><br />
+				</section>
+
+				<section>
+					<div class="video-wrap">
+						<video poster="../Components/video/281.png">
+							<source
+								src="../Components/video/ОRELCalculator2.8.1.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<div class="v-overlay">
+							<div class="v-overlay-btn show">
+								<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+							</div>
+						</div>
+						<div class="video-controls">
+							<div class="v-progress"><div class="v-fill"></div></div>
+							<div class="v-row">
+								<button class="v-btn v-play">
+									<svg class="icon-play" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" /></svg
+									><svg
+										class="icon-pause"
+										viewBox="0 0 24 24"
+										style="display: none"
+									>
+										<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+									</svg>
+								</button>
+								<div class="v-vol-wrap">
+									<button class="v-btn v-mute">
+										<svg class="icon-vol" viewBox="0 0 24 24">
+											<path
+												d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+											/></svg
+										><svg
+											class="icon-muted"
+											viewBox="0 0 24 24"
+											style="display: none"
+										>
+											<path
+												d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+											/>
+										</svg>
+									</button>
+									<input
+										type="range"
+										class="v-vol"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+								<span class="v-time">0:00 / 0:00</span>
+								<div class="v-spacer"></div>
+								<button class="v-btn v-fs">
+									<svg class="icon-fs" viewBox="0 0 24 24">
+										<path
+											d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+										/></svg
+									><svg class="icon-fs-exit" viewBox="0 0 24 24">
+										<path
+											d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<h3>Калькулятор 2.8.1</h3>
+					<br /><br />
+				</section>
+
+				<section>
+					<div class="video-wrap">
+						<video poster="../Components/video/27.png">
+							<source
+								src="../Components/video/ORELcalculator2.7.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<div class="v-overlay">
+							<div class="v-overlay-btn show">
+								<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+							</div>
+						</div>
+						<div class="video-controls">
+							<div class="v-progress"><div class="v-fill"></div></div>
+							<div class="v-row">
+								<button class="v-btn v-play">
+									<svg class="icon-play" viewBox="0 0 24 24">
+										<path d="M8 5v14l11-7z" /></svg
+									><svg
+										class="icon-pause"
+										viewBox="0 0 24 24"
+										style="display: none"
+									>
+										<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+									</svg>
+								</button>
+								<div class="v-vol-wrap">
+									<button class="v-btn v-mute">
+										<svg class="icon-vol" viewBox="0 0 24 24">
+											<path
+												d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"
+											/></svg
+										><svg
+											class="icon-muted"
+											viewBox="0 0 24 24"
+											style="display: none"
+										>
+											<path
+												d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+											/>
+										</svg>
+									</button>
+									<input
+										type="range"
+										class="v-vol"
+										min="0"
+										max="1"
+										step="0.05"
+										value="1"
+									/>
+								</div>
+								<span class="v-time">0:00 / 0:00</span>
+								<div class="v-spacer"></div>
+								<button class="v-btn v-fs">
+									<svg class="icon-fs" viewBox="0 0 24 24">
+										<path
+											d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+										/></svg
+									><svg class="icon-fs-exit" viewBox="0 0 24 24">
+										<path
+											d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<h3>Калькулятор 2.7</h3>
+					<br /><br />
+				</section>
+			</div>
+		</div>
+
+		<div class="features">
+			<h3>Спасибо за поддержку</h3>
+			<p>Этаму каналу</p>
+			<div class="info">
+				<div class="block">
+					<img src="../Components/img/it.jpg" height="110px" width="110px" />
+					<p>Всё о программировании</p>
+					<div class="btn"><a href="https://t.me/it_reviews_other">→</a></div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="block">
+				<div class="logo">orel</div>
+				<div class="logop">Спасибо за внимение!</div>
+			</div>
+		</footer>
+
+		<script src="../Components/js/jquery.js"></script>
+		<script src="../Components/js/index.js"></script>
+		<!-- Кастомный плеер JS -->
+		<script src="../Components/js/video-player.js"></script>
+	</body>
 </html>
