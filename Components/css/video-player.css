@@ -86,6 +86,13 @@
   opacity: 0;
   transition: opacity 0.22s;
 }
+
+/* Только WebKit/Chromium */
+@supports (-webkit-appearance: none) {
+  .video-controls { opacity: 0; }
+  .video-wrap:hover .video-controls { opacity: 1; }
+}
+
 .video-wrap:hover .video-controls,
 .video-wrap:fullscreen .video-controls,
 .video-wrap:-webkit-full-screen .video-controls {
