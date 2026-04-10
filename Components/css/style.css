@@ -300,7 +300,7 @@ header nav ul li.btn a:hover {
 }
 
 /* ── BACK TO TOP ────────────────────────────────────── */
-@media (min-width: 600px) {
+@media (min-width: 769px) {
     .back-to-top {
         background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-3) 100%);
         border-radius: 50%;
@@ -318,24 +318,6 @@ header nav ul li.btn a:hover {
         transform: scale(1.9);
         box-shadow: 0 8px 28px rgba(17, 38, 96, 0.75),
                     0 0 22px rgba(33, 80, 200, 0.35);
-    }
-}
-
-@media (max-width: 599px) {
-    .back-to-top {
-        background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-3) 100%);
-        border-radius: 50% 50% 20% 20%;
-        position: fixed;
-        bottom: -60px;
-        padding: 9px 11px;
-        right: 12px;
-        cursor: pointer;
-        transition: 0.3s all;
-        border: 1px solid rgba(17, 38, 96, 0.45);
-        box-shadow: 0 4px 14px rgba(6, 14, 34, 0.55);
-    }
-    .back-to-top:active {
-        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-h) 100%);
     }
 }
 
@@ -562,4 +544,391 @@ button {
     box-shadow: 0 8px 24px rgba(17, 38, 96, 0.7),
                 0 0 18px rgba(33, 80, 200, 0.25);
     border-color: rgba(33, 80, 200, 0.5);
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   ПЛАНШЕТ  ≤ 1024px
+   (на случай если окно не развёрнуто на 1366px)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    .hero--info {
+        width: 420px;
+    }
+
+    .hero--info h1 {
+        font-size: 38px;
+    }
+
+    .big-text {
+        width: 100%;
+        font-size: 28px;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   МОБИЛКА  ≤ 768px
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* ── HEADER ──────────────────────────────────────── */
+    header {
+        padding: 16px 0;
+    }
+
+    header .logo {
+        font-size: 22px;
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    header nav {
+        float: none;
+        width: 100%;
+    }
+
+    /* Навигация — две строки, всё по центру */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Первая строка: обычные ссылки */
+    header nav ul li {
+        margin-left: 0;
+        display: inline-block;
+    }
+
+    /* Группируем ссылки в две строки через flex-контейнер */
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 4px 0;
+    }
+
+    header nav ul li {
+        margin: 0 10px 6px 10px;
+    }
+
+    header nav ul li a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* Кнопка "Тех поддержка" — отдельной строкой по центру */
+    header nav ul li.btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 6px;
+    }
+
+    header nav ul li.btn a {
+        padding: 8px 20px;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    /* ── CONTAINER ───────────────────────────────────── */
+    .conteiner {
+        padding: 4% 5% 3% 5%;
+    }
+
+    /* ── HERO ────────────────────────────────────────── */
+    .hero {
+        padding-bottom: 40px;
+    }
+
+    .hero--info {
+        width: 100%;
+        padding-top: 36px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero--info h2 {
+        font-size: 14px;
+    }
+
+    .hero--info h1 {
+        font-size: 30px;
+        margin: 14px 0;
+        line-height: 145%;
+    }
+
+    .hero--info .btn {
+        padding: 12px 26px;
+        font-size: 15px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    /* Картинка в hero выходит из absolute в обычный поток */
+    .hero img {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    /* ── LINER ───────────────────────────────────────── */
+    .liner {
+        padding-top: 36px;
+    }
+
+    .liner h3 {
+        font-size: 22px;
+    }
+
+    .liner .see-all,
+    .liner .see-allu {
+        float: none;
+        display: block;
+        width: fit-content;
+        margin: 14px auto 0 auto;
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+
+    .liner .prog,
+    .liner .progi {
+        flex-direction: column;
+        padding: 28px 0;
+        gap: 22px;
+    }
+
+    /* Скриншоты в .progi — высокие */
+    .liner .progi img {
+        height: auto;
+        width: 160px;
+        border-radius: 16px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Иконки в .prog — маленькие, не растягиваем */
+    .liner .prog img {
+        height: auto;
+        width: 96px;
+        border-radius: 16px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .liner .prog .block {
+        text-align: center;
+    }
+
+    .liner .prog span,
+    .liner .progi span {
+        font-size: 14px;
+    }
+
+    .liner .progi .block .btn {
+        padding: 11px 22px;
+        font-size: 15px;
+    }
+
+    /* ── BIG TEXT ────────────────────────────────────── */
+    .big-text {
+        width: 100%;
+        font-size: 22px;
+        padding: 36px 0;
+    }
+
+    .big-text .btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    /* ── FEATURES ────────────────────────────────────── */
+    .features {
+        padding: 60px 0;
+    }
+
+    .features h3 {
+        font-size: 22px;
+    }
+
+    .features p {
+        font-size: 15px;
+    }
+
+    .features .info .block {
+        margin: 18px 3%;
+        width: 94%;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer .block .logo {
+        font-size: 22px;
+    }
+
+    footer .block .logop {
+        font-size: 16px;
+    }
+
+    /* ── VIDEO ───────────────────────────────────────── */
+    video {
+        border-radius: 12px;
+    }
+
+    /* ── BTN7 ────────────────────────────────────────── */
+    .btn7 {
+        float: none;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+
+    /* ── BACK TO TOP ─────────────────────────────────── */
+    .back-to-top {
+        background: linear-gradient(135deg, var(--blue-1) 0%, var(--blue-3) 100%);
+        border-radius: 50% 50% 20% 20%;
+        position: fixed;
+        bottom: -60px;
+        padding: 9px 11px;
+        right: 12px;
+        cursor: pointer;
+        transition: 0.3s all;
+        border: 1px solid rgba(17, 38, 96, 0.45);
+        box-shadow: 0 4px 14px rgba(6, 14, 34, 0.55);
+    }
+
+    .back-to-top:active {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-h) 100%);
+    }
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   ТЕЛЕФОН  ≤ 480px
+═══════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+    /* ── HEADER ──────────────────────────────────────── */
+    header {
+        padding: 12px 0;
+    }
+
+    header .logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    header nav ul {
+        gap: 6px 8px;
+    }
+
+    header nav ul li a {
+        font-size: 13px;
+    }
+
+    header nav ul li.btn a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* ── CONTAINER ───────────────────────────────────── */
+    .conteiner {
+        padding: 5% 4% 4% 4%;
+    }
+
+    /* ── HERO ────────────────────────────────────────── */
+    .hero--info h2 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .hero--info h1 {
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    .hero--info .btn {
+        padding: 11px 22px;
+        font-size: 14px;
+    }
+
+    /* ── LINER ───────────────────────────────────────── */
+    .liner h3 {
+        font-size: 18px;
+    }
+
+    .liner .see-all,
+    .liner .see-allu {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+
+    .liner .progi img {
+        height: 160px;
+    }
+
+    .liner .prog img {
+        height: auto;
+        width: 80px;
+    }
+
+    /* ── BIG TEXT ────────────────────────────────────── */
+    .big-text {
+        font-size: 18px;
+        padding: 28px 0;
+    }
+
+    .big-text .btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    /* ── FEATURES ────────────────────────────────────── */
+    .features {
+        padding: 40px 0;
+        /* fixed background ломается на iOS — заменяем на scroll */
+        background-attachment: scroll;
+    }
+
+    .features h3 {
+        font-size: 18px;
+    }
+
+    .features p {
+        font-size: 14px;
+    }
+
+    .features .info .block {
+        margin: 12px 2%;
+        width: 96%;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer .block .logo {
+        font-size: 18px;
+    }
+
+    footer .block .logop {
+        font-size: 14px;
+    }
+
+    /* ── VIDEO ───────────────────────────────────────── */
+    video {
+        border-radius: 10px;
+        margin-top: 14px;
+    }
+
+    /* ── BTN7 ────────────────────────────────────────── */
+    .btn7 {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
 }
